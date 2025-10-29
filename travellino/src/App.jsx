@@ -1,25 +1,15 @@
-import { useEffect, useState } from 'react';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/home_page.jsx";
 
-function CountriesList() {
-  const [countries, setCountries] = useState([]);
-
-  useEffect(() => {
-    async function getCountries() {
-      const res = await fetch('http://localhost:8000/countries/');
-      const data = await res.json();
-      setCountries(data);
-    }
-    getCountries();
-  }, []);
-
+function App() {
   return (
-    <div>
-      <h1>Countries</h1>
-      <ul>
-        {countries.map(c => <li key={c.id}>{c.name}</li>)}
-      </ul>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </Router>
   );
 }
 
-export default CountriesList;
+export default App;
