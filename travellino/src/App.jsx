@@ -3,7 +3,6 @@ import CountriesList from "./pages/CountriesList";
 import CountryDetails from "./pages/CountryDetails";
 import Layout from "./pages/Layout";
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/home_page.jsx";
 
 function App() {

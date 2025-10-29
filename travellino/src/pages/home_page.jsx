@@ -1,11 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./home_page.css";
+import logo from "../res/logo.png";
 
 const home_page = ()=> {
     return (
         <div className={"container"}>
             <header className={"navigbar"}>
+                  <img
+              src={logo}
+              alt="Travellino Logo"
+              className="h-8 w-auto mr-3"
+            />
                 <h1 className={"logo"}>Travellino Cappuchino</h1>
                 <nav className={"navigbar-links"}>
                     <Link to="/">Main</Link>
@@ -20,6 +26,18 @@ const home_page = ()=> {
                 <Link to="/trips" className={"button"}>Book a trip</Link>
             </main>
             <footer className="footer">
+                   <ul className="flex flex-wrap justify-center items-center mb-4 text-sm font-medium">
+            <li>
+              <a href="/countries" className="mr-4 hover:text-blue-500 md:mr-6 transition-colors">
+                Countries
+              </a>
+            </li>
+            <li>
+              <a href="/about" className="hover:text-blue-500 transition-colors">
+                About us
+              </a>
+            </li>
+          </ul>
         © {new Date().getFullYear()} DevDivas.
       </footer>
         </div>
