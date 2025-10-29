@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./home_page.css";
 import logo from "../res/logo.png";
+import CountriesList from "./CountriesList.jsx";
+import CountryDetails from "./CountryDetails.jsx";
+
 
 const home_page = ()=> {
     return (
@@ -17,7 +20,7 @@ const home_page = ()=> {
                     <Link to="/">Main</Link>
                     <Link to="/trip_list">Trips</Link>
                     <Link to="/profile">My profile</Link>
-                    <Link to="/contacts">Contacts</Link>
+                    <Link to="/countries">Countries</Link>
                     <Link to="/about">About us</Link>
                 </nav>
             </header>
@@ -28,8 +31,8 @@ const home_page = ()=> {
             <footer className="footer">
                    <ul className="flex flex-wrap justify-center items-center mb-4 text-sm font-medium">
             <li>
-              <a href="/countries" className="mr-4 hover:text-blue-500 md:mr-6 transition-colors">
-                Countries
+              <a href="/contacts" className="mr-4 hover:text-blue-500 md:mr-6 transition-colors">
+                Contacts
               </a>
             </li>
             <li>

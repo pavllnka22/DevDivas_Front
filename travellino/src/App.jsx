@@ -10,7 +10,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-      </Routes>
+           <Route path="/countries" element={<CountriesList />} />
+<Route path="/country/:id" element={<CountryDetails />} />      </Routes>
     </Router>
   );
 }
